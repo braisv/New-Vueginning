@@ -4,13 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>New Vueginning</title>
   </head>
 
   <body>
 
-    <div id="app">
+    <div id="app" class="container mt-5">
       <h1>{{title}}</h1>
+
+      <div :class="['p-3', 'text-white', background]">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore unde suscipit ipsam perferendis. Error aspernatur maiores, impedit aut aliquam molestiae, recusandae velit quam fuga excepturi tempore unde eum, tempora distinctio.</p>
+      </div>
+
+      <input type="text" class="form-control my-3" v-model="background">
+
+      <div class="tex-white p-3" :class="{'bg-info' : color , 'bg-success' : !color}">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nostrum labore nam eligendi perferendis nisi. Id nisi labore omnis eveniet molestias quas nam sequi ipsum sint. Incidunt eaque sit iure!</p>
+      </div>
+
+      <button class="btn btn-primary" @click="color = !color">Change</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
